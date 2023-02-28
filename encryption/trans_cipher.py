@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 
+# change RijndaelCbc -> AES-CBC
+
 import base64
 import pprint
 import hashlib
