@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for i in $(grep -R -l "DB::table" .)
+for i in $(grep -R -l "{match_text}" .)
 do
     sed -r -f ch_model.sed $i > $i.ch;
     diff $i $i.ch > $i.diff;
