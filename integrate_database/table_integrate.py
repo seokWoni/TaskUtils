@@ -9,7 +9,6 @@ import sys, os
 # 상위 경로 module 호출을 위해 표시
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 import db_setting
-from se_shoplinker_tbl import se_shoplinker_tbl
 
 # module에 입력한 setting 정보 읽어오기
 def get_setting(env):
@@ -26,10 +25,7 @@ class TableIntegrate():
         self.db_setting = db_setting
         self.env        = env
         self.table_name = table_name
-        if table_name in se_shoplinker_tbl:
-            setting = get_setting(env).get('main')
-        else:
-            setting = get_setting(env).get('cust')
+        setting = get_setting(env)
 
         self.engine = create_engine('mysql+pymysql://{db_user}:{db_pass}@{db_host}/{db_name}?charset=utf8mb4'.format(**setting), pool_recycle=120, pool_size=3, max_overflow=20, echo=False, echo_pool=False)
 
