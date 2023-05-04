@@ -17,8 +17,7 @@ init_vactor = ''
 block_size = 32
 encry_key = ''
 
-class transfer_cipher:
-
+class TransferCipher:
     def __init__(self):
         self.IV          = '{init_vactor}'
         self.BLOCK_SIZE  = block_size
