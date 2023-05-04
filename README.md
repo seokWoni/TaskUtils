@@ -1,8 +1,10 @@
 # WorkTask
 ## linux
 * shell_script
+* dump_database
+* naming_case
 ## python
-* encrypt/decrypt
-*
+* encryption
+* integrate_database
 ## php
 *
